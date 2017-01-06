@@ -35,7 +35,8 @@ main(int argc, char **argv)
 
 /* Generate next set of truth values
  * Beautiful algorithm
- * */
+ * (Credit Discrete Mathematics - J. P. Tremblay and R. Manohar)
+ */
 void next(int base[], int length[], int tcase[])
 {
         for (int k = 1; k <= N; k++) {
