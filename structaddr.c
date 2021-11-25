@@ -2,7 +2,6 @@
  * the address of the structure */
 
 #include <stdio.h>
-#include <string.h>
 #include <sys/types.h>
 
 typedef struct {
@@ -20,20 +19,20 @@ typedef struct {
 int
 main(int argc, char **argv)
 {
-        server_resolve_t resolv;
         server_resolve_t *base;
         server_resolve_t *addr;
-
         /* int *ele; */
         /* size_t offset; */
 
-        resolv.type = 1;
-        resolv.fd_no = 88;
-        strncpy((char *)resolv.gfid, "AA-FFX8334r3-22", 16);
-        strncpy((char *)resolv.pargfid, "BB-GGXF334r3-11", 16);
-        resolv.path = "/tmp/foo/bar";
-        resolv.op_errno = 99;
-        resolv.op_ret = 44;
+        server_resolve_t resolv = {
+                .type =  1,
+                .fd_no = 8,
+                .gfid  = "aa-jnhskmk-lk",
+                .pargfid = "bb-iknkjex-981",
+                .path    = "/tmp/foo/bar/baz",
+                .op_errno = 81,
+                .op_ret   = 3,
+        };
 
         base = (server_resolve_t *)0;
         /* ele = &base->op_ret; */
